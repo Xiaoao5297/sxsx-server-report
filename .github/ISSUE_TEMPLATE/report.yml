@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        感谢你帮助维护服务器环境。请尽量一次性写清 **谁、什么时候、在哪个服、做了什么、有什么证据**。
+        感谢你帮助维护服务器环境。请尽量一次性写清 **谁、什么时候、在哪里、做了什么、有什么证据**。
 
         注意：本仓库是公开的，请勿填写住址、身份证、密码等隐私信息。
 
@@ -29,7 +29,7 @@ body:
     id: offender
     attributes:
       label: 被举报玩家
-      description: 填写游戏内用户名（本服为 MCPE 基岩版，无正版验证，写用户名即可）
+      description: 填写游戏内用户名
       placeholder: 例如：Steve123
     validations:
       required: true
@@ -38,8 +38,8 @@ body:
     id: time
     attributes:
       label: 发生时间
-      description: 精确到分钟更好，请注明时区
-      placeholder: 例如：2026-11-22 20:30 左右（北京时间）
+      description: 精确到分钟更好
+      placeholder: 例如：2026-11-22 20:30 左右
     validations:
       required: true
 
@@ -47,7 +47,7 @@ body:
     id: location
     attributes:
       label: 所在子服 / 地图 / 坐标
-      placeholder: 例如：生存一区，主城东侧 (-120, 64, 340)
+      placeholder: 例如：生存区，主城东侧 (-120, 64, 340)
     validations:
       required: false
 
@@ -66,7 +66,7 @@ body:
     id: evidence
     attributes:
       label: 证据
-      description: 截图/录屏请直接拖进本框上传，不要只发网盘链接
+      description: 截图/录屏请直接拖进本框上传，或网盘链接
       placeholder: 上传截图或录屏，并简单说明每份证据对应哪一步
     validations:
       required: true
