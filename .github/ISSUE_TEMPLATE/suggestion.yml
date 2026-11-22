@@ -52,5 +52,7 @@ body:
     id: contact
     attributes:
       label: 联系方式（可选）
+      description: 建议留 QQ 号或微信号；本仓库公开，手机号请谨慎填写
+      placeholder: QQ 12345678 / 微信 xxx
     validations:
       required: false
