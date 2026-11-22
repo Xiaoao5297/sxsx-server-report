@@ -1,0 +1,90 @@
+name: 违规举报
+description: 举报作弊、恶意破坏、辱骂刷屏、诈骗或其他违规行为
+title: "[举报] "
+labels: ["举报", "待处理"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你帮助维护服务器环境。请尽量一次性写清 **谁、什么时候、在哪个服、做了什么、有什么证据**。
+
+        > ⚠️ 本仓库是公开的，请勿填写手机号、住址、身份证、密码等隐私信息。
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 举报类型
+      options:
+        - 作弊 / 外挂
+        - 恶意破坏（拆家、放火、偷窃）
+        - 辱骂 / 刷屏 / 骚扰
+        - 诈骗 / 交易纠纷
+        - 利用漏洞（Bug）
+        - 管理滥用
+        - 其他违规
+    validations:
+      required: true
+
+  - type: input
+    id: offender
+    attributes:
+      label: 被举报玩家
+      description: 游戏 ID；有正版 ID 或 UUID 也请一并写上
+      placeholder: 例如：Steve_123（正版 Steve123）
+    validations:
+      required: true
+
+  - type: input
+    id: time
+    attributes:
+      label: 发生时间
+      description: 精确到分钟更好，请注明时区
+      placeholder: 例如：2026-11-22 20:30 左右（UTC+8）
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 所在子服 / 地图 / 坐标
+      placeholder: 例如：生存一区，主城东侧 (-120, 64, 340)
+    validations:
+      required: false
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 事件经过
+      description: 按时间顺序描述发生了什么，越具体越好
+      placeholder: |
+        1. 20:28 我在……
+        2. 20:30 对方……
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: 截图/录屏请直接拖进本框上传，不要只发网盘链接
+      placeholder: 上传截图或录屏，并简单说明每份证据对应哪一步
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（可选）
+      description: 如果愿意留下游戏内 ID / Discord，方便管理组回访
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认事项
+      options:
+        - label: 我确认以上内容真实，证据未经篡改
+          required: true
+        - label: 我理解恶意举报或伪造证据会被处理
+          required: true

@@ -1,0 +1,56 @@
+name: 建议 / 意见
+description: 对玩法、活动、插件功能、规则或管理方式提出建议
+title: "[建议] "
+labels: ["建议", "待处理"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提出建议。请说明 **想改什么、为什么、希望变成什么样**，越具体越容易被采纳。
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 建议类型
+      options:
+        - 玩法 / 机制
+        - 活动 / 赛事
+        - 插件 / 功能
+        - 建筑 / 地图
+        - 规则 / 管理
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: 建议内容
+      description: 你想增加、修改或删除什么
+      placeholder: 例如：希望增加周末双倍经验活动
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 理由 / 期望效果
+      description: 为什么需要它？能解决什么问题？
+      placeholder: 例如：现在新人升级太慢，容易流失
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 其他方案（可选）
+      description: 如果你也考虑过别的做法，可以写在这里
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（可选）
+    validations:
+      required: false
